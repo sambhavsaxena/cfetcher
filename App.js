@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { StyleSheet, Text, SafeAreaView, FlatList, ActivityIndicator, Alert, Linking, Button } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, FlatList, ActivityIndicator, Alert, Linking } from 'react-native';
 
 const url = "https://codeforces.com/api/contest.list?gym=false";
 const giturl = "https://github.com/sambhavsaxena"
@@ -39,7 +39,7 @@ const App = () => {
                 date > new Date() ?
                   <Text style={styles.table}>
                     <Text style={styles.text}>
-                      {item.id}. {item.name} | <Text style={styles.none1}>Upcoming Contests</Text>
+                      {item.id}. {item.name} | <Text style={styles.none1}>Upcoming Contest</Text>
                       {"\n"}
                       <Text style={styles.text2}>
                         {dateStr}, {hours} hrs {minutes} mins
