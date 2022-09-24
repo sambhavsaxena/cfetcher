@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "new_first",
-    "slug": "new_first",
+    "name": "cfetcher",
+    "slug": "cfetcher",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
