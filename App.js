@@ -39,19 +39,21 @@ const App = () => {
                 date > new Date() ?
                   <Text style={styles.table}>
                     <Text style={styles.text}>
-                      {item.id}. {item.name} | <Text style={styles.none1}>Upcoming Contest</Text>
+                      {item.id}. {item.name}
                       {"\n"}
                       <Text style={styles.text2}>
                         {dateStr}, {hours} hrs {minutes} mins
                       </Text>
+                      {"\n"}<Text style={styles.none1}>Upcoming Contest</Text>
                     </Text>
                   </Text> : <Text style={styles.table}>
                     <Text style={styles.text}>
-                      {item.id}. {item.name} | <Text style={styles.none2}>Contest Over</Text>
+                      {item.id}. {item.name}
                       {"\n"}
                       <Text style={styles.text2}>
                         {dateStr}, {hours} hrs {minutes} mins
                       </Text>
+                      {"\n"}<Text style={styles.none2}>Contest Over</Text>
                     </Text>
                   </Text>
               )
@@ -70,7 +72,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000',
     alignItems: 'center',
-    marginTop: 30,
+    marginTop: '8%',
     justifyContent: 'center',
   },
   text: {
@@ -80,10 +82,9 @@ const styles = StyleSheet.create({
   },
   text2: {
     fontFamily: 'monospace',
-    color: 'red',
+    color: '#1a75ff',
   },
   title: {
-    textDecoration: 'underline',
     color: '#fff',
     marginTop: 30,
     marginBottom: 30,
@@ -95,10 +96,10 @@ const styles = StyleSheet.create({
     margin: 16,
   },
   none1: {
-    color: 'green'
+    color: '#66ff33'
   },
   none2: {
-    color: 'yellow'
+    color: '#990000',
   },
   table: {
     backgroundColor: '#000',
