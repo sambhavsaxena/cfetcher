@@ -4,7 +4,7 @@ Cfetcher is a cross platform application written and bundled with React-native t
 Each time the application renders, a request is sent to the codeforces API that lists the upcoming and ongoing contests.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/thatsameguyokay/images/main/fortlax.png">
+  <img src="https://raw.githubusercontent.com/thatsameguyokay/images/main/cfetcher.png">
 </div>
 
 ## Installation
@@ -33,8 +33,8 @@ To follow this, consider walking through the [official](https://developer.androi
 
 ## to-do
 
-Configure the `server` directory to use local proxy through the application, instead of providing an open-to-all API.
-Understanding this [package.json](https://github.com/sambhavsaxena/ikigai/blob/081e3e781e2621d0205d2d743511ecb66e2ffc7d/frontend/package.json#L3) might help with the implementation.
+Configure the application to set alarms every time a new contest pops up. We could also consider sending local push notifications, to start with.
+[This](https://github.com/zo0r/react-native-push-notification#readme) might help getting started with the idea.
 
 ## Documentation
 
