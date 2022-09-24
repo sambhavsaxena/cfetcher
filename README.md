@@ -3,6 +3,8 @@
 Cfetcher is a cross platform application written and bundled with React-native that fetches the upcoming contests on [Codeforces](https://codeforces.com).
 Each time the application renders, a request is sent to the codeforces API that lists the upcoming and ongoing contests.
 
+Download [here](https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40sambhavsaxena02/cfetcher-a395abf609fa4f99a71bd80282025b6e-signed.apk).
+
 <div align="center">
   <img src="https://raw.githubusercontent.com/thatsameguyokay/images/main/cfetcher.png">
 </div>
