@@ -72,7 +72,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000',
     alignItems: 'center',
-    marginTop: '8%',
     justifyContent: 'center',
   },
   text: {
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#fff',
-    marginTop: 30,
+    marginTop: 50,
     marginBottom: 30,
     fontFamily: 'monospace',
     fontSize: 20,
