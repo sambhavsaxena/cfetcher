@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, Text, SafeAreaView, FlatList, ActivityIndicator, Alert, Linking } from 'react-native';
+import { Dimensions } from "react-native";
+const screenHeight = Dimensions.get('screen').height;
+const windowHeight = Dimensions.get('window').height;
+const navbarHeight = screenHeight - windowHeight
 
 const url = "https://codeforces.com/api/contest.list?gym=false";
 const giturl = "https://github.com/sambhavsaxena"
@@ -70,7 +74,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: '7%',
+    marginTop: navbarHeight,
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
