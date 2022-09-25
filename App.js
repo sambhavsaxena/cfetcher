@@ -9,9 +9,9 @@ const App = () => {
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
-      .then((json) => setData(json.result.slice(0, 30)))
-      .catch((error) => Alert.alert("Error", error))
+      .then((json) => setData(json.result.slice(0, 20)))
       .then(() => Alert.alert("Contests Updated", "The upcoming contests have been updated."))
+      .catch((error) => Alert.alert("Error", error))
       .finally(() => setLoading(false))
   }, []);
 
@@ -44,7 +44,7 @@ const App = () => {
                       <Text style={styles.text2}>
                         {dateStr}, {hours} hrs {minutes} mins
                       </Text>
-                      {"\n"}<Text style={styles.none1}>Upcoming Contest</Text>
+                      {"\n"}<Text style={styles.none1} onPress={() => Linking.openURL("https://codeforces.com/contests/" + item.id)}>Register</Text>
                     </Text>
                   </Text> : <Text style={styles.table}>
                     <Text style={styles.text}>
@@ -53,7 +53,7 @@ const App = () => {
                       <Text style={styles.text2}>
                         {dateStr}, {hours} hrs {minutes} mins
                       </Text>
-                      {"\n"}<Text style={styles.none2}>Contest Over</Text>
+                      {"\n"}<Text style={styles.none2} onPress={() => Linking.openURL("https://codeforces.com/contest/" + item.id)}>Upsolve</Text>
                     </Text>
                   </Text>
               )
@@ -70,7 +70,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: '8%',
+    marginTop: '7%',
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#fff',
-    marginTop: 50,
-    marginBottom: 30,
+    marginTop: 20,
+    marginBottom: 20,
     fontFamily: 'monospace',
     fontSize: 20,
   },
