@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, Text, SafeAreaView, FlatList, ActivityIndicator, Alert, Linking } from 'react-native';
-import { Dimensions } from "react-native";
-const screenHeight = Dimensions.get('screen').height;
-const windowHeight = Dimensions.get('window').height;
-const navbarHeight = screenHeight - windowHeight
 
 const url = "https://codeforces.com/api/contest.list?gym=false";
 const giturl = "https://github.com/sambhavsaxena"
@@ -31,7 +27,7 @@ const App = () => {
       {
         isLoading ?
           <ActivityIndicator /> :
-          <FlatList
+          data.length > 0 ? <FlatList
             data={data}
             keyExtractor={({ id }) => id}
             renderItem={({ item }) => {
@@ -62,7 +58,7 @@ const App = () => {
                   </Text>
               )
             }}
-          />
+          /> : <Text style={styles.text}>No upcoming contests</Text>
       }
       <Text style={styles.footer} onPress={handlepress}>
         With love, Sambhav Saxena
@@ -74,7 +70,6 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: navbarHeight,
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
@@ -89,8 +84,9 @@ const styles = StyleSheet.create({
     color: '#1a75ff',
   },
   title: {
+    textDecoration: 'underline',
     color: '#fff',
-    marginTop: 20,
+    marginTop: 50,
     marginBottom: 20,
     fontFamily: 'monospace',
     fontSize: 20,
