@@ -6,7 +6,7 @@ Each time the application renders, a request is sent to the codeforces API that 
 Download the latest relese [here](https://github.com/sambhavsaxena/cfetcher/releases/download/1.1.2/Cfetcher-1.1.2.apk).
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/thatsameguyokay/images/main/cfetcher.png">
+  <img src="https://cdn.statically.io/gh/thatsameguyokay/images/main/cfetcher.png">
 </div>
 
 ## Installation
